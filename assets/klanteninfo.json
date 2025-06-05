@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "name": "Julian Hamilton",
+      "geboortedatum": "11.07.1988",
+      "gsmnummer": "0465849554",
+      "email": "julian.hamilton@example.com",
+      "wachtwoord": "12345678",
+      "adres": "Blauwstraat 12"
+    },
+    {
+      "name": "Sharlene Ramos",
+      "geboortedatum": "12.07.1998",
+      "gsmnummer": "0467889543",
+      "email": "sharlene.ramos@gmail.com",
+      "wachtwoord": "password1",
+      "adres": "Groenstraat 45"
+    },
+    {
+      "name": "Douglas Garza",
+      "geboortedatum": "22.11.1985",
+      "gsmnummer": "0465893211",
+      "email": "douglas.garza@gmail.com",
+      "wachtwoord": "ilovecode",
+      "adres": "Roodstraat 78"
+    },
+    {
+      "name": "Carolyn Hicks",
+      "geboortedatum": "05.09.1978",
+      "gsmnummer": "0467981123",
+      "email": "carolyn.hicks@gmail.com",
+      "wachtwoord": "qwerty123",
+      "adres": "Geelstraat 90"
+    },
+    {
+      "name": "Jeremy Duncan",
+      "geboortedatum": "19.06.2000",
+      "gsmnummer": "0465112233",
+      "email": "jeremy.duncan@gmail.com",
+      "wachtwoord": "hello123",
+      "adres": "Zwartstraat 11"
+    },
+    {
+      "name": "Enrique Ross",
+      "geboortedatum": "15.02.1992",
+      "gsmnummer": "0467445566",
+      "email": "enrique.ross@gmail.com",
+      "wachtwoord": "securepass",
+      "adres": "Witstraat 22"
+    }
+  ]
+}

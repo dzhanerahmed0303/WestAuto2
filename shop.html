@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="shop.css" />
+    
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/47520a2bf5.js" crossorigin="anonymous"></script>    
+    <script src="scriptmand.js" defer></script>
+    <script src="scriptProduct.js" defer></script>
+    <script src="scriptclock.js" defer></script>
+    <title>Web-Shop</title>
+</head>
+<header>
+    <div class="menu">
+        
+        <h1 id="title" class="title"><span class="top">West</span> Auto</h1>
+          <nav>
+            <ul class="menukeuzes">
+                <li class="clock"></li>
+                <li><a href="index.html">Hoofdpagina</a></li>
+                <li><a href="shop.html">Auto's</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="overons.html">Over ons</a></li>
+                <li><a href="">Favorieten</a></li>
+                <li><a href="">Winkelmandje</a></li>
+                <li class="zoeken"> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> <input type="text" id="zoekbalk" placeholder="Zoek op"></li>         
+                 
+              </ul>
+          </nav>
+    </div>
+</header>
+<aside> 
+    <ul class="filter">
+      <li>
+        Merk:
+        <form action="" method="">
+          <select id="merkfilter" class="merkfilter" name="merkfilter">
+            <option value=""></option>
+            <option value="Audi">Audi</option>
+            <option value="Mercedes">Mercedes-Benz</option>
+            <option value="BMW">BMW</option>
+            <option value="Bentley">Bentley</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Rollsroyce">Rolls-Royce</option>
+            <option value="Porsche">Porsche</option>
+          </select>
+          </form>
+      </li>   
+    <br>               
+        
+      <li>
+        Prijs:  
+          <form method="" class="prijsfiltercontainer" >
+          <input type="number" class="prijsfilter" name="prijsOnder" placeholder="van" style="color:darkslategray;">
+          <input type="number" class="prijsfilter" name="prijsBoven" placeholder="tot" style="color: darkslategray;">
+        </form>
+      </li>
+    <br>
+      <li>
+        Kilometerstand:
+        <form method="" cl  ass="kmfiltercontainer" >
+          <input type="number" class="kmfilter" name="kmOnder" placeholder="van" style="color: darkslategray;">
+          <input type="number" class="kmfilter" name="kmBoven" placeholder="tot" style="color: darkslategray;">
+          </form>
+      </li>
+    <br> 
+      <li>
+        Transmissie:
+        <form action="" method="">
+          <select class="transmissiefilter" name="transmissiefilter">
+            <option value=""></option>
+            <option value="automaat">Automaat</option>
+            <option value="schakel">Schakel</option>
+            <option value="semi_automaat">Semi-automaat</option>               
+          </select>
+        </form>
+      </li>   
+    <br>
+    <li>
+      Bouwjaar:
+      <form method="" class="jaarfilter" >
+        <input type="number" class="jaarfilter" name="jaarOnder" placeholder="van" style="color: darkslategray;">
+        <input type="number" class="jaarfilter" name="jaarBoven" placeholder="tot" style="color: darkslategray;">
+      </form>
+    </li> 
+  <br>
+    <li>
+      Vermogen:
+      <form method="" class="vermogenfilter" >
+        <input type="number" class="vermogenfilter" name="vermogenOnder" placeholder="van" style="color: darkslategray;">
+        <input type="number" class="vermogenfilter" name="vermogenBoven" placeholder="tot" style="color: darkslategray;">
+      </form>
+    </li> 
+    <br>
+    </ul>
+    
+    <div id="shoppingCart">
+      
+      <ul id="cart-items">
+       <h2 id="shop"></h2>
+      </ul>
+      <div class="receipt">
+        <table>
+          <tr>
+            <td>Sub-Total:</td>
+            <td id="sub-total">€0</td>
+          </tr>
+          <tr>
+            <td>Eco Tax (-2.00):</td>
+            <td id="eco-tax">€0</td>
+          </tr>
+          <tr>
+            <td>BTW (20%):</td>
+            <td id="vat">€0</td>
+          </tr>
+          <tr class="total-row">
+            <td><span>Totaal:</span></td>
+            <td id="total">€<span class="totaalgeld">0</span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="cart-actions">
+        
+        <button id="checkout">Afrekenen</button>
+      </div>
+    </div>
+    
+  </aside>  
+<body>
+    <main>
+    <div id="mid" class="mid">
+      
+        <div id="autos" class="autos">
+          <article class="autos" data-id="auto8">
+            <a href="productpagina.html">
+            <img src="NewFotos/Mercedes-C63-2018-black.png" alt="MercedesC63" />
+            <ul class="carinfo8">
+              <li class="model"> Mercedes-Benz C63</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">112995</span></li>
+          
+              <li class="km">Kilometerstand: 4.250 km</li>
+    
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 469 PK</li>
+              
+              
+            </ul>
+          </a>
+          <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button>        
+        </article>
+        <article class="autos" data-id="auto6">
+          <a href="productpagina.html">
+          <img src="NewFotos/bmwM5.jpg" alt="BmwM5" />
+  
+          <ul class="carinfo6">
+            <li class="model"> BMW M5</li>
+            
+            <li class="prijs">Prijs: €<span class="geld">110095</span> </li>
+  
+            <li class="km">Kilometerstand: 4.250 km</li>
+  
+            <li class="jaar">Bouwjaar: 2020</li>
+            
+            <li class="brandstof">Brandstof: Benzine</li>
+            
+            <li class="vermogen">Vermogen: 591 PK</li>
+  
+          </ul>
+          </a>
+          <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+          
+        </article>
+        
+          <article class="autos" data-id="auto1">
+            <a href="productpagina.html">
+              <img src="NewFotos/BMW-M3Touring.png" alt="Porsche 911 Turbo S" />
+              
+            <ul class="carinfo1">
+              <li class="model">BMW M3 station wagon</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">120000</span></li>
+  
+              <li class="km">Kilometerstand: 5.200 km</li>
+  
+              <li class="jaar">Bouwjaar: 2024</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 503 PK</li>
+  
+            </ul>
+            </a>
+            <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+          </article>
+          
+        
+          <article class="autos" data-id="auto2">
+            <a href="productpagina.html">
+            <img src="NewFotos/Rolls-Royce-Ghost 2020.png" alt="RollsRoyceGhost" />
+  
+            <ul class="carinfo2">
+              <li class="model"> Rolls Royce Ghost</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">132000</span></li>                     
+              
+              <li class="km">Kilometerstand: 4.250 km</li>
+                                   
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 563 PK</li>
+              
+            </ul>
+          </a>
+          <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+           
+        </article>
+          <article class="autos" data-id="auto3">
+            <a href="productpagina.html">
+            <img src="NewFotos/Audi-R8-2022-red.png" alt="Audi R8" />
+  
+            <ul class="carinfo3">
+              <li class="model"> Audi R8</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">122000</span></li>
+              
+              <li class="km">Kilometerstand: 6000 km</li>
+              
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 562K</li>
+              
+            </ul>
+          </a>
+          <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+           
+        </article>
+          
+          <article class="autos" data-id="auto4">
+            <a href="productpagina.html">
+            <img src="NewFotos/Audi-RS6-2022.png" alt="Audi RS6" />
+  
+            <ul class="carinfo4">
+              <li class="model">  Audi RS6</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">145005</span></li>
+  
+              <li class="km">Kilometerstand: 4.250 km</li>                        
+              
+              <li class="jaar">Bouwjaar: 2022</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 591 PK</li>
+  
+            </ul>
+          </a>
+          <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+          
+        </article>
+        
+          <article class="autos" data-id="auto5">
+            <a href="productpagina.html">
+            <img src="NewFotos/bentleyContinentalAI.jpg" alt="Bentley Continental" />
+  
+            <ul class="carinfo5">
+              <li class="model"> Bentley Continental</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">166995</span></li>
+  
+              <li class="km">Kilometerstand: 4.250 km</li>
+  
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 582 PK</li>
+              
+              
+            </ul>
+          </a>
+          <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+        </article>
+          
+          
+          <article class="autos" data-id="auto7">
+            <a href="productpagina.html">
+            <img src="NewFotos/Audi-RS7-2022.png" alt="AudiRS7" />
+  
+            <ul class="carinfo7">
+              <li class="model"> Audi RS7</li>
+        
+              <li class="prijs">Prijs: €<span class="geld">152995</span></li>
+            
+              <li class="km">Kilometerstand: 3.900 km</li>
+    
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 591 PK</li>
+              
+              
+            </ul>
+            </a>
+            <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+          </article>
+          
+          <article class="autos" data-id="auto9">
+            <a href="productpagina.html">
+            <img src="NewFotos/lamborghini-Huracan-rood.png" alt="Lamborghini Huracan" />
+  
+            <ul class="carinfo9">
+              <li class="model"> Lamborghini Huracan</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">150000</span></li>
+             
+              <li class="km">Kilometerstand: 14.536 km</li>
+             
+              <li class="jaar">Bouwjaar: 2021</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 639 PK</li>                        
+            </ul>
+            </a>
+            <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+          </article>
+          
+          <article class="autos" data-id="auto10">
+            <a href="productpagina.html">
+            <img src="NewFotos/porsche911.jpg" alt="Porsche 911 Turbo S" />
+  
+            <ul class="carinfo10">
+              <li class="model"> Porsche 911 Turbo S</li>
+  
+              <li class="prijs">Prijs: €<span class="geld">200000</span></li>
+                                      
+              <li class="km">Kilometerstand: 3.250 km</li>                      
+              
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 473 PK</li>            
+              
+            </ul>
+            </a>
+            <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+          </article>
+          <article class="autos" data-id="auto11">
+            <a href="productpagina.html">
+            <img src="NewFotos/Mercedes-S63-2023-black.png" alt="mercedesS" />
+  
+            <ul class="carinfo11">
+              <li class="model"> Mercedes-Benz S63</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">112995</span></li>
+                         
+              <li class="km">Kilometerstand: 4.250 km</li>
+  
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+             
+              <li class="vermogen">Vermogen: 791 PK</li>
+  
+            </ul>
+            </a> 
+            <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+          </article>  
+          
+          
+          <article class="autos" data-id="auto12">
+            <a href="productpagina.html">
+            <img src="NewFotos/Mercedes-E63-2012.png" alt="Mercedes E63" />
+  
+            <ul class="carinfo12">
+              <li class="model"> Mercedes-Benz E63</li>
+              
+              <li class="prijs">Prijs: €<span class="geld">152995</span></li>
+            
+              <li class="km">Kilometerstand: 4.005 km</li>
+           
+              <li class="jaar">Bouwjaar: 2023</li>
+              
+              <li class="brandstof">Brandstof: Benzine</li>
+              
+              <li class="vermogen">Vermogen: 550PK</li>
+              
+              
+            </ul>
+            </a>
+            <button class="buy"><i class="fa-solid fa-cart-shopping"></i></button> 
+            
+          </article>     
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ul>
+        <li>&copy; 2024 West Auto. All Rights Reserved.</li>
+           
+        <li><a href="tel:+32423456567">0423456567</a></li>
+        
+        <li><a href="mailto:westauto@gmail.com">westauto@gamil.com</a></li>
+      </ul>    
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+services:
+    traefik:
+        image: traefik:v2.11
+        command:
+            - --log.level=DEBUG
+            - --api.insecure=true
+            - --providers.docker=true
+            - --providers.docker.exposedbydefault=false
+            - --entrypoints.web.address=:80
+            - --entrypoints.websecure.address=:443
+            - --certificatesresolvers.mijnresolver.acme.httpchallenge=true
+            - --certificatesresolvers.mijnresolver.acme.httpchallenge.entrypoint=web
+            - --certificatesresolvers.mijnresolver.acme.email=dzhaner.ahmedd@gmail.com
+            - --certificatesresolvers.mijnresolver.acme.storage=/encbestand/acme.json
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./encbestand:/encbestand
+        networks:
+            - default
+
+    app:
+        image: westauto.azurecr.io/westauto-app:v1
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.app.rule=Host(`westauto-dzhaner.mooo.com`)"
+            - "traefik.http.routers.app.entrypoints=websecure"
+            - "traefik.http.routers.app.tls.certresolver=mijnresolver"
+            - "traefik.http.services.app.loadbalancer.server.port=80"
+        expose:
+            - "80"
+        networks:
+            - default
+
+networks:
+    default:
+        external: false

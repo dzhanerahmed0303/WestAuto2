@@ -1,0 +1,36 @@
+{
+  "location": "westeurope",
+  "name": "westauto-container",
+  "properties": {
+    "containers": [
+      {
+        "name": "westauto-container",
+        "properties": {
+          "image": "dzhanerahmed/westauto-app",
+          "resources": {
+            "requests": {
+              "cpu": 1,
+              "memoryInGb": 1.0
+            }
+          },
+          "ports": [
+            {
+              "port": 80
+            }
+          ]
+        }
+      }
+    ],
+    "osType": "Linux",
+    "ipAddress": {
+      "type": "Public",
+      "dnsNameLabel": "westauto-dzhaner999",
+      "ports": [
+        {
+          "protocol": "tcp",
+          "port": 80
+        }
+      ]
+    }
+  }
+}
