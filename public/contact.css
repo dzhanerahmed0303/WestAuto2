@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+
+  background-image: url(srcFotos/yildiz.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+header {
+  font-family: "Playfair Display SC", serif;
+}
+main {
+  margin-top: 12rem;
+  margin-bottom: 5rem;
+}
+.contacteerons {
+  position: relative;
+  bottom: 2vh;
+  font-size: 43px;
+}
+form {
+  height: 64rem;
+  width: 57vw;
+  margin-top: 10vh;
+  padding-top: 2rem;
+  background-image: linear-gradient(180deg, #021526af 30%, #000000 80%);
+  font-size: 1.3rem;
+  color: white;
+  position: relative;
+  left: 21vw;
+
+  border: 2px solid #ffffff46;
+  border-radius: 0.7rem;
+}
+fieldset {
+  width: 40vw;
+  position: relative;
+  left: 9vw;
+  border: none;
+}
+select {
+  all: revert;
+  background-color: #ffffff46;
+  width: 25vw;
+  color: white;
+  border-radius: 6px;
+  height: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0.6rem;
+  border: 2px solid white;
+}
+
+input,
+textarea {
+  margin: 0.7rem 0 0.7rem 0;
+  border: 2px solid white;
+  border-radius: 0.3rem;
+  width: 38vw;
+  background-color: #ffffff46;
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+textarea {
+  height: 5rem;
+}
+input {
+  height: 2rem;
+}
+button {
+  margin: 0.7rem 0 2rem 0;
+  width: 38vw;
+  height: 5vh;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  background-color: white;
+}
+button:hover {
+  font-size: 1.05rem;
+}
+#naamlabel::after,
+#berichtlabel::after,
+#achnaamlabel::after {
+  content: "*";
+  color: red;
+}
+/*-menubalk-*/
+
+#map {
+  height: 270px;
+  width: 40vw;
+  border: 2px solid white;
+  box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    height: 10rem;
+  }
+  #map {
+    height: 230px;
+  }
+}

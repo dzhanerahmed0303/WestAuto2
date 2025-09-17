@@ -1,0 +1,134 @@
+[
+  {
+    "id": "8",
+    "brand": "Mercedes-Benz",
+    "model": "C63",
+    "price": 112995,
+    "mileage": 4250,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 469,
+    "image": "NewFotos/Mercedes-C63-2018-black.png"
+  },
+  {
+    "id": "6",
+    "brand": "BMW",
+    "model": "M5",
+    "price": 110095,
+    "mileage": 4250,
+    "year": 2020,
+    "fuel": "Benzine",
+    "hp": 591,
+    "image": "NewFotos/bmwM5.png"
+  },
+  {
+    "id": "1",
+    "brand": "BMW",
+    "model": "M3 station wagon",
+    "price": 120000,
+    "mileage": 5200,
+    "year": 2024,
+    "fuel": "Benzine",
+    "hp": 503,
+    "image": "NewFotos/BMW-M3Touring.png"
+  },
+  {
+    "id": "2",
+    "brand": "Rolls-Royce",
+    "model": "Ghost",
+    "price": 132000,
+    "mileage": 4250,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 563,
+    "image": "NewFotos/Rolls-Royce-Ghost 2020.png"
+  },
+  {
+    "id": "3",
+    "brand": "Audi",
+    "model": "R8",
+    "price": 122000,
+    "mileage": 6000,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 562,
+    "image": "NewFotos/Audi-R8-2022-red.png"
+  },
+  {
+    "id": "4",
+    "brand": "Audi",
+    "model": "RS6",
+    "price": 145005,
+    "mileage": 4250,
+    "year": 2022,
+    "fuel": "Benzine",
+    "hp": 591,
+    "image": "NewFotos/Audi-RS6-2022.png"
+  },
+  {
+    "id": "5",
+    "brand": "Bentley",
+    "model": "Continental",
+    "price": 166995,
+    "mileage": 4250,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 582,
+    "image": "NewFotos/bentleyContinentalAI.png"
+  },
+  {
+    "id": "7",
+    "brand": "Audi",
+    "model": "RS7",
+    "price": 152995,
+    "mileage": 3900,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 591,
+    "image": "NewFotos/Audi-RS7-2022.png"
+  },
+  {
+    "id": "9",
+    "brand": "Lamborghini",
+    "model": "Huracan",
+    "price": 150000,
+    "mileage": 14536,
+    "year": 2021,
+    "fuel": "Benzine",
+    "hp": 639,
+    "image": "NewFotos/lamborghini-Huracan-rood.png"
+  },
+  {
+    "id": "10",
+    "brand": "Porsche",
+    "model": "911 Turbo S",
+    "price": 200000,
+    "mileage": 3250,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 473,
+    "image": "NewFotos/porsche911.png"
+  },
+  {
+    "id": "11",
+    "brand": "Mercedes-Benz",
+    "model": "S63",
+    "price": 112995,
+    "mileage": 4250,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 791,
+    "image": "NewFotos/Mercedes-S63-2023-black.png"
+  },
+  {
+    "id": "12",
+    "brand": "Mercedes-Benz",
+    "model": "E63",
+    "price": 152995,
+    "mileage": 4005,
+    "year": 2023,
+    "fuel": "Benzine",
+    "hp": 550,
+    "image": "NewFotos/Mercedes-E63-2012.png"
+  }
+]

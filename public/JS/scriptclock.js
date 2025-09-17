@@ -9,8 +9,10 @@ async function clockCount() {
   );
   let clock = await clockData.json();
 
-  console.log(`${clock.hour}:${clock.minute}`);
-  clockLi.textContent = `${clock.hour}:${clock.minute}`;
+  let hour = String(clock.hour).padStart(2, "0");
+  let minute = String(clock.minute).padStart(2, "0");
+
+  clockLi.textContent = `${hour}:${minute}`;
 }
 clockCount();
 setInterval(clockCount, 1000);

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <script src="/JS/script.js" defer></script>
+    <script src="/JS/scriptclock.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/47520a2bf5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/JS/scriptmand.js" defer></script>
+    <script src="/JS/scriptProduct.js" defer></script>
+    <title>Web-Shop</title>
+  </head>
+  <%-include("partials/header")%>
+  <aside>
+    <ul class="filter">
+      <li>
+        Merk:
+        <form action="" method="">
+          <select id="merkfilter" class="merkfilter" name="merkfilter">
+            <option value=""></option>
+            <option value="Audi">Audi</option>
+            <option value="Mercedes">Mercedes-Benz</option>
+            <option value="BMW">BMW</option>
+            <option value="Bentley">Bentley</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Rollsroyce">Rolls-Royce</option>
+            <option value="Porsche">Porsche</option>
+          </select>
+        </form>
+      </li>
+      <br />
+
+      <li>
+        Prijs:
+        <form method="" class="prijsfiltercontainer">
+          <input
+            type="number"
+            class="prijsfilter"
+            name="prijsOnder"
+            placeholder="van"
+            style="color: darkslategray"
+          />
+          <input
+            type="number"
+            class="prijsfilter"
+            name="prijsBoven"
+            placeholder="tot"
+            style="color: darkslategray"
+          />
+        </form>
+      </li>
+      <br />
+      <li>
+        Kilometerstand:
+        <form method="" cl ass="kmfiltercontainer">
+          <input
+            type="number"
+            class="kmfilter"
+            name="kmOnder"
+            placeholder="van"
+            style="color: darkslategray"
+          />
+          <input
+            type="number"
+            class="kmfilter"
+            name="kmBoven"
+            placeholder="tot"
+            style="color: darkslategray"
+          />
+        </form>
+      </li>
+      <br />
+      <li>
+        Transmissie:
+        <form action="" method="">
+          <select class="transmissiefilter" name="transmissiefilter">
+            <option value=""></option>
+            <option value="automaat">Automaat</option>
+            <option value="schakel">Schakel</option>
+            <option value="semi_automaat">Semi-automaat</option>
+          </select>
+        </form>
+      </li>
+      <br />
+      <li>
+        Bouwjaar:
+        <form method="" class="jaarfilter">
+          <input
+            type="number"
+            class="jaarfilter"
+            name="jaarOnder"
+            placeholder="van"
+            style="color: darkslategray"
+          />
+          <input
+            type="number"
+            class="jaarfilter"
+            name="jaarBoven"
+            placeholder="tot"
+            style="color: darkslategray"
+          />
+        </form>
+      </li>
+      <br />
+      <li>
+        Vermogen:
+        <form method="" class="vermogenfilter">
+          <input
+            type="number"
+            class="vermogenfilter"
+            name="vermogenOnder"
+            placeholder="van"
+            style="color: darkslategray"
+          />
+          <input
+            type="number"
+            class="vermogenfilter"
+            name="vermogenBoven"
+            placeholder="tot"
+            style="color: darkslategray"
+          />
+        </form>
+      </li>
+      <br />
+    </ul>
+
+    <div id="shoppingCart">
+      <ul id="cart-items">
+        <h2 id="shop"></h2>
+      </ul>
+      <div class="receipt">
+        <table>
+          <tr>
+            <td>Sub-Total:</td>
+            <td id="sub-total">€0</td>
+          </tr>
+          <tr>
+            <td>Eco Tax (-2.00):</td>
+            <td id="eco-tax">€0</td>
+          </tr>
+          <tr>
+            <td>BTW (20%):</td>
+            <td id="vat">€0</td>
+          </tr>
+          <tr class="total-row">
+            <td><span>Totaal:</span></td>
+            <td id="total">€<span class="totaalgeld">0</span></td>
+          </tr>
+        </table>
+      </div>
+      <div class="cart-actions">
+        <button id="checkout">Afrekenen</button>
+      </div>
+    </div>
+  </aside>
+  <body>
+    <main>
+      <div id="mid" class="mid">
+        <div id="autos" class="autos">
+          <% cars.forEach(car => { %>
+
+          <article class="autos" data-id="auto8">
+            <a href="/productpagina/<%= car.id %>">
+              <img src="<%=car.image%>" alt="<%=car.brand%><%=car.model%>" />
+              <ul class="carinfo8">
+                <li class="model">Model:<%=car.brand%> <%=car.model%></li>
+
+                <li class="prijs">
+                  Prijs: €<span class="geld"><%= car.price %></span>
+                </li>
+
+                <li class="km">Kilometerstand: <%= car.mileage %></li>
+
+                <li class="jaar">Bouwjaar: <%= car.year %></li>
+
+                <li class="brandstof">Brandstof: <%= car.fuel %></li>
+
+                <li class="vermogen">Vermogen: <%= car.hp %> PK</li>
+              </ul>
+            </a>
+            <button class="buy">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button class="compare">
+              <i class="fa-solid fa-code-compare"></i>
+            </button>
+            <button class="favorite"><i class="fa-solid fa-heart"></i></button>
+          </article>
+          <% }); %>
+        </div>
+      </div>
+    </main>
+    <%-include("partials/footer")%>
+  </body>
+</html>

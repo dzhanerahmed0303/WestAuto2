@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/47520a2bf5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scriptProduct.js" defer></script>
+    <script src="scriptclock.js" defer></script>
+    <title>Productpagina</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <h1 id="title" class="title"><span class="top">West</span> Auto</h1>
+        <nav>
+          <ul class="menukeuzes">
+            <li class="clock"></li>
+            <li><a href="/">Hoofdpagina</a></li>
+            <li><a href="/shop">Auto's</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/overons">Over ons</a></li>
+            <li><a href="">Favorieten</a></li>
+            <li><a href="">Winkelmandje</a></li>
+            <li><a href="/logout">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="producten" class="producten">
+      <div class="mainauto">
+        <figure>
+          <img
+            src="/<%= car.image %>"
+            alt="<%= car.brand %> <%= car.model %>"
+          />
+        </figure>
+        <ul class="carinfo">
+          <div class="carinfo1">
+            <li class="model">
+              <span> <%= car.brand %> <%= car.model %> </span>
+            </li>
+
+            <li class="prijs">
+              <span> €<%= car.price %> </span>
+            </li>
+
+            <li class="locatie">
+              <span>Locatie:</span>
+              <span>Herent, BE</span>
+            </li>
+
+            <li class="km">
+              <span>Kilometerstand:</span>
+              <span><%= car.mileage %>km</span>
+            </li>
+
+            <li class="transmissie">
+              <span>Transmissie:</span>
+              <span>Automatisch</span>
+            </li>
+
+            <li class="jaar">
+              <span>Bouwjaar:</span>
+              <span><%= car.year %></span>
+            </li>
+
+            <li class="brandstof">
+              <span>Brandstof: </span>
+              <span><%= car.fuel %> </span>
+            </li>
+
+            <li class="vermogen">
+              <span>Vermogen:</span>
+              <span><%= car.hp %>hp</span>
+            </li>
+
+            <li class="verkoper">
+              <span>Verkoper:</span>
+              <span>Autobedrijf</span>
+            </li>
+          </div>
+          <button class="winkelmandje">In winkelmandje zetten</button>
+
+          <button class="favorieten">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </ul>
+      </div>
+      <form action="">
+        <label for="review">Geef je mening over deze product</label>
+        <br />
+        <div class="rating">
+          <input type="radio" id="star5" name="star5" value="5" />
+          <label for="star5" title="5 sterren"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+
+          <input type="radio" id="star4" name="star4" value="4" />
+          <label for="star4" title="4 sterren"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+
+          <input type="radio" id="star3" name="star3" value="3" />
+          <label for="star3" title="3 sterren"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+
+          <input type="radio" id="star2" name="star2" value="2" />
+          <label for="star2" title="2 sterren"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+
+          <input type="radio" id="star1" name="star1" value="1" />
+          <label for="star1" title="1 sterren"
+            ><i class="fa-solid fa-star"></i
+          ></label>
+        </div>
+        <br />
+        <textarea id="review" type="text"></textarea>
+        <br />
+        <button type="submit">VERZEND</button>
+      </form>
+
+      <div class="reviews"></div>
+    </main>
+    <footer>
+      <ul>
+        <li>&copy; 2024 West Auto. All Rights Reserved.</li>
+        <li><a href="tel:+32423456567">0423456567</a></li>
+        <li><a href="mailto:westauto@gmail.com">westauto@gamil.com</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

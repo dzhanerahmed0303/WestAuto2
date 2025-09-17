@@ -1,5 +1,6 @@
 "use strict";
 (() => {
+  
   let geselecteerdeAutos = [];
   let hoeveelheden = {};
   let favbox = document.querySelector("#cart-items");
@@ -22,11 +23,10 @@
       } else {
         geselecteerdeAutos.push(autoId);
         hoeveelheden[autoId] = 1;
-
+        console.log("JS BESTAND WERKT")
         button.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
         button.style.color = "rgba(255, 191, 0, 0.993)";
       }
-
       updateCart();
     });
   });

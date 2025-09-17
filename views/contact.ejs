@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="stijl2.css" />
+    <link rel="stylesheet" href="contact.css" />
     <script src="scriptmap.js" defer></script>
     <script src="scriptclock.js" defer></script>
-    
-    
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -23,65 +26,51 @@
     <title>Contact</title>
   </head>
   <body>
-    <header>
-      <div class="menu">
-        <h1 id="title" class="title">
-          <span class="top">West</span> Auto
-        </h1>
-        <nav>
-          <ul class="menukeuzes">
-            <li class="clock"></li> 
-            <li><a href="index.html">Hoofdpagina</a></li>
-            <li><a href="shop.html">Auto's</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="overons.html">Over ons</a></li>
-            <li><a href="">Favorieten</a></li>
-            <li><a href="">Winkelmandje</a></li>
-            
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%-include("partials/header")%>
 
     <main>
       <form action="#">
         <fieldset>
           <h1 class="contacteerons">Contacteer ons</h1>
           <label for="bereik">Wie wil je bereiken?</label>
-          <br>
+          <br />
           <select name="bereik" id="bereik">
-            
-            <option value="eigenaar" style="color: aliceblue; background-color: #021526">
+            <option
+              value="eigenaar"
+              style="color: aliceblue; background-color: #021526"
+            >
               Eigenaar van de auto
             </option>
-            <option value="webshop eigenaar" style="color: aliceblue; background-color: #021526">
+            <option
+              value="webshop eigenaar"
+              style="color: aliceblue; background-color: #021526"
+            >
               Eigenaar van de website
             </option>
           </select>
-          <br>
+          <br />
           <label id="naamlabel" for="naam">Voornaam:</label>
           <input type="text" id="naam" required />
           <label id="achnaamlabel" for="achnaam">Achternaam:</label>
           <input type="text" id="achnaam" required />
-          <br>
+          <br />
           <label for="mail">E-mail:</label>
           <input type="email" name="mail" id="mail" />
           <label for="tel">Telefoonnummer</label>
           <input type="tel" id="tel" />
           <label id="berichtlabel" for="bericht">Bericht:</label>
-          <textarea name="bericht" id="bericht" required maxlength="100"></textarea>
+          <textarea
+            name="bericht"
+            id="bericht"
+            required
+            maxlength="100"
+          ></textarea>
           <button type="submit">VERZEND</button>
           <div id="map"></div>
         </fieldset>
       </form>
     </main>
 
-    <footer>
-      <ul>
-        <li>&copy; 2024 West Auto. All Rights Reserved.</li>
-        <li><a href="tel:+32423456567">0423456567</a></li>
-        <li><a href="mailto:westauto@gmail.com">westauto@gmail.com</a></li>
-      </ul>
-    </footer>
+    <%-include("partials/footer")%>
   </body>
 </html>

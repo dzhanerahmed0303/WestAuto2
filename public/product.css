@@ -52,10 +52,10 @@ body {
   border-bottom: 10px double #ffffffd3;
 }
 .menu ul {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: "Playfair Display SC", serif;
 }
 .menu ul li {
   margin-right: 2rem;
@@ -95,10 +95,16 @@ main{
   
   
 }
+.carinfo{
+  padding: 2rem;
+}
+.producten figure{
+  height: 34rem;
+}
 .producten figure img {
-  height: 25rem;
+  
   border: 2px solid white;
-  margin-right: 3.5rem;
+  
 }
 .mainauto {
   padding-left: 1.5rem;
@@ -107,18 +113,37 @@ main{
   color: white;
   border: 2px solid rgb(255, 255, 255);
   box-shadow: 6px 6px 6px 5px rgb(71, 71, 71);
-  width: 60rem;
-  height: 28rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.carinfo {
+.carinfo1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #ffffff;
   height: fit-content;
-padding-left: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 4rem;
   font-size: 1.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
+}
+.carinfo1 li {
+  display: flex;
+  justify-content: space-between; /* label links, value rechts */
+  padding: 0.3rem 0;
+}
+.carinfo1 li span:nth-child(2){
+  font-size: 25px;
+  /* font-family: "Playfair Display SC", serif; */
+}
+.carinfo1 .label {
+  font-weight: 600;
+}
+
+.carinfo1 .value {
+  text-align: right;
+  min-width: 8rem; /* optioneel: zodat alles mooi uitlijnt */
 }
 
 .model {
@@ -170,7 +195,7 @@ form{
   padding-top: 1rem;
 }
 textarea{
-  margin-top: 1rem;
+  /* margin-top: 0px; */
   padding: 0.5rem;
   width: 25rem;
   height: 6rem;
@@ -178,7 +203,7 @@ textarea{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: left;
   border-radius: 5px;
-  border: 2px dotted white;
+  border: 2px solid white;
 }
 
 button{
@@ -195,7 +220,32 @@ font-size: 1rem;
 form button:hover{
   width: 7.5rem; 
 }
-    
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse; /* zorgt dat hoogste ster links staat */
+  justify-content: center;
+}
+
+.rating input {
+  display: none; /* verberg de radio buttons */
+}
+
+.rating label {
+  font-size: 2rem;
+  color: #ccc; /* grijs voor niet-geselecteerde sterren */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/*- deze code zorgt ervoor dat de sterren voor de gekozen punt ook geel worden -*/
+.rating input:checked ~ label i,
+.rating label:hover ~ label i,
+.rating label:hover i {
+  color: gold; /* geel als geselecteerd of hover */
+}
+/*- - - - - - - - - - - - - - - -*/
+
 
 /*review*/
 

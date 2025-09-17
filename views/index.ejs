@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/index.css" />
+
+    <script src="/JS/script.js" defer></script>
+    <script src="/JS/scriptclock.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/47520a2bf5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/JS/scriptmand.js" defer></script>
+    <script src="/JS/scriptProduct.js" defer></script>
+    <title>Homepagina</title>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main id="main">
+      <div class="nissan">
+        <h2 class="welcometext">
+          <a href="#meestbekeken">Welkom, <%= user %>!</a>
+        </h2>
+        <img class="sfeerbeeld" src="srcFotos/nissan35z1.jpg" alt="nis" />
+      </div>
+      <div id="maincontainer">
+        <div id="meestbekeken" class="meestbekeken">
+          <span>Meest bekeken</span>
+          <ul>
+            <% meestBekeken.forEach(auto => { %>
+            <li>
+              <a href="/productpagina/<%= auto.id %>">
+                <figure>
+                  <img src="<%= auto.img %>" alt="<%= auto.name %>" />
+                  <figcaption><%= auto.name %></figcaption>
+                </figure>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="owner1">
+          <figure>
+            <img id="dzhaner" src="srcFotos/dzhaner.jpg" alt="dzhaner" />
+            <p class="uitleg">
+              Deze website is gemaakt door Dzhaner Ahmed voor autoliefhebbers
+              die interesse hebben in auto's kopen en verkopen. Voor wie auto's
+              meer zijn dan alleen een vervoersmiddel, bent u hier aan het
+              juiste adres! Neem contact op of ontdek vandaag nog ons
+              uitgebreide aanbod. Uw perfecte auto wacht op u!
+            </p>
+          </figure>
+        </div>
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

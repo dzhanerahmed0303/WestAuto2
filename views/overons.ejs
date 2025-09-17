@@ -5,37 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="aboutstijl4.css">
-    <script src="scriptclock.js" defer></script>
-    
+    <script src="/JS/scriptclock.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Over-ons</title>
   </head>
   <body>
     
-      <header class="image-container">
-      <div id="menu" class="menu">
-        <div class="menu">
-        
-          <h1 id="title" class="title"><span class="top">West</span> Auto</h1>
-          <nav>
-              <ul class="menukeuzes">
-                  <li class="clock"></li>  
-                  <li><a href="index.html">Hoofdpagina</a></li>
-                  <li><a href="shop.html">Auto's</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="overons.html">Over ons</a></li>
-                  <li><a href="">Favorieten</a></li>
-                  <li><a href="">Winkelmandje</a></li>
-                         
-              </ul>
-          </nav>
-        </div>
-      </div>
-      </header>
-      <main>
+      <%-include("partials/header")%>
+    <main>
       <p>
         <h1 class="over_ons">Over Ons</h1>
-
-<p>Welkom bij West Auto, een familiebedrijf waar auto's en klanten centraal staan. Al generaties lang combineren wij onze passie voor auto's met de allerbeste service. Wat in 2024 begon als een bescheiden garage in Schoten, is uitgegroeid tot een moderne webshop die klanten uit heel België bedient met een breed assortiment auto's, onderdelen en accessoires. Maar hoewel we met de tijd zijn meegegaan, blijven onze kernwaarden onveranderd: betrouwbaarheid, persoonlijke service en een familiegevoel dat elke klant welkom heet.</p>
+      <p>Welkom bij West Auto, een familiebedrijf waar auto's en klanten centraal staan. Al generaties lang combineren wij onze passie voor auto's met de allerbeste service. Wat in 2024 begon als een bescheiden garage in Schoten, is uitgegroeid tot een moderne webshop die klanten uit heel België bedient met een breed assortiment auto's, onderdelen en accessoires. Maar hoewel we met de tijd zijn meegegaan, blijven onze kernwaarden onveranderd: betrouwbaarheid, persoonlijke service en een familiegevoel dat elke klant welkom heet.</p>
 
 <h2>Onze Geschiedenis</h2>
 <p>Het verhaal van West Auto begint met Dzhaner Ahmed, een man met een droom en een diepe liefde voor auto's. In 2024 besloot hij zijn eerste garage te openen in Schoten, een klein maar knus pand in een buurt waar iedereen elkaar kende. Dzhaner begon met simpele reparaties en het helpen van buren bij het vinden van betrouwbare tweedehands auto's. Al snel viel hij op door zijn eerlijke advies, vakmanschap en toewijding. Klanten wisten dat ze op hem konden rekenen, en dat maakte hem geliefd in de regio.</p>
@@ -77,15 +60,9 @@
       </p>
         <aside>Gemaakt in 2024</aside>
         <aside>Dzhaner Ahmed</aside>
-        <p><img src="src/dzhaner.jpg" alt="dzhaner_ahmed_picture"></p>
+        <p><img src="srcFotos/dzhaner.jpg" alt="dzhaner_ahmed_picture"></p>
     
-      <footer>
-        <ul>
-          <li>&copy; 2024 West Auto. All Rights Reserved.</li> 
-          <li><a href="tel:+32423456567">0423456567</a></li>
-          <li><a href="mailto:westauto@gmail.com">westauto@gamil.com</a></li>
-        </ul>    
-      </footer>
+      <%-include("partials/footer")%>
     </main>
   </body>
 </html>

@@ -1,0 +1,86 @@
+<header>
+  <div class="menu">
+    <h1 id="title" class="title"><span class="top">West</span>Auto</h1>
+    <nav>
+      <ul class="menukeuzes">
+        <!-- <li class="clock"></li> -->
+        <li><a href="/">Hoofdpagina</a></li>
+        <li><a href="/shop">Auto's</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/overons">Over ons</a></li>
+        <li><a href="/auto-toevoegen">Auto toevoegen</a></li>
+        <li><a href="">Winkelmandje</a></li>
+        <li id="logout"><a href="/logout">Log out</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  header {
+    margin-bottom: 2rem;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .menu {
+    width: 100%;
+    background: linear-gradient(180deg, black, #021526);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    border-bottom: 5px double #ffffffd3;
+    font-family: "Playfair Display SC", serif;
+    font-size: 1.2rem;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    color: #e4e4e4;
+    padding: 1rem 0;
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
+    /* font-family: "Times New Roman", serif; */
+    font-family: "Playfair Display SC", serif;
+  }
+
+  .menu ul {
+    font-family: "Playfair Display SC", serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu ul li {
+    margin: 0 1.5rem;
+  }
+
+  #logout a {
+    margin-left: 0%;
+
+    font-weight: 800;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: text-shadow 0.2s;
+  }
+
+  .menu ul li a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+
+  .clock {
+    font-family: "DS Digital", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    position: absolute;
+    top: 3.8rem;
+    left: 10px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    color: white;
+  }
+</style>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - West Auto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="/reset.css" /> -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #021526 0%, #044343 100%);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header styling */
+      header {
+        font-family: "Playfair Display SC", serif;
+        width: 100%;
+      }
+
+      .menu {
+        width: 100%;
+        height: 7.6rem;
+        background-image: linear-gradient(180deg, black, #021526);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        border-bottom: 10px double #ffffffd3;
+        font-family: "Playfair Display SC", serif;
+      }
+
+      .title {
+        padding-top: 0.8rem;
+        color: #fafafa;
+        font-size: 3.5rem;
+        text-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+
+      .top {
+        border-radius: 6px 20px;
+      }
+
+      .menu ul {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: "Playfair Display SC", serif;
+        list-style: none;
+        padding: 0;
+      }
+
+      .menu ul li {
+        margin-right: 2rem;
+        margin-top: 0.5rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+
+      .menu ul li a:hover {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      }
+
+      .clock {
+        font-family: "DS Digital", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+        position: absolute;
+        top: 4.2rem;
+        left: 10px;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+      }
+
+      /* Main content styling - zorgt dat de login in het midden komt */
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      /* Login container styling */
+      .login-container {
+        background-color: #021526;
+        padding: 2.5rem 3rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        width: 350px;
+        margin: 2rem 0;
+      }
+
+      .login-container h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #44d4c1;
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+
+      .login-container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-container label {
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+        color: lightgrey;
+      }
+
+      .login-container input {
+        padding: 0.8rem;
+        margin-bottom: 1.2rem;
+        border-radius: 6px;
+        border: 1px solid grey;
+        outline: none;
+        font-size: 1rem;
+      }
+
+      .login-container input:focus {
+        border-color: #044343;
+        box-shadow: 0 0 5px #044343;
+      }
+
+      .login-container button {
+        padding: 0.8rem;
+        background-color: #044343;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 1rem;
+      }
+
+      .login-container button:hover {
+        background-color: #021526;
+        border: 1px solid #044343;
+      }
+
+      .login-container .register {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .login-container .register a {
+        color: #44d4c1;
+        text-decoration: none;
+      }
+
+      .login-container .register a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 400px) {
+        .login-container {
+          width: 90%;
+          padding: 2rem;
+        }
+
+        .menu ul li {
+          margin-right: 1rem;
+        }
+
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <h1 id="title" class="title"><span class="top">West</span>Auto</h1>
+        <nav>
+          <ul class="menukeuzes">
+            <li class="clock"></li>
+            <li><a href="/">Hoofdpagina</a></li>
+            <li><a href="/shop">Auto's</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/overons">Over ons</a></li>
+            <li><a href="">Favorieten</a></li>
+            <li><a href="">Winkelmandje</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="login-container">
+        <h1>Login</h1>
+        <form action="/registreren" method="POST">
+          <label for="username">Gebruikersnaam</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Voer je gebruikersnaam in"
+            required
+          />
+
+          <label for="password">Wachtwoord</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Voer je wachtwoord in"
+            required
+          />
+
+          <label for="password">Wachtwoord</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="Herhaal je wachtwoord"
+            required
+          />
+
+          <button type="submit">Inloggen</button>
+        </form>
+        <div class="register">
+          Wel een account? <a href="/login">Log hier in</a>
+        </div>
+      </div>
+    </main>
+
+    
+    </script>
+  </body>
+</html>
